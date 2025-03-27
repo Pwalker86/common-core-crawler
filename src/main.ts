@@ -1,9 +1,11 @@
 // For more information, see https://crawlee.dev/
 import { CheerioCrawler, ProxyConfiguration } from "crawlee";
+import { PrismaClient } from "@prisma/client";
 
 import { router } from "./routes.js";
 
 const startUrls = ["https://www.education.com/common-core/"];
+const prisma = new PrismaClient();
 
 const crawler = new CheerioCrawler({
   // proxyConfiguration: new ProxyConfiguration({ proxyUrls: ['...'] }),
@@ -12,4 +14,8 @@ const crawler = new CheerioCrawler({
   maxRequestsPerCrawl: 20,
 });
 
-await crawler.run(startUrls);
+try {
+  await crawler.run(startUrls);
+} finally {
+  await prisma.$disconnect();
+}
