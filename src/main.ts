@@ -1,6 +1,10 @@
 // For more information, see https://crawlee.dev/
-import { CheerioCrawler, ProxyConfiguration } from "crawlee";
+import { CheerioCrawler } from "crawlee";
 import { PrismaClient } from "@prisma/client";
+import * as dotenv from "dotenv";
+
+// Load environment variables from .env file
+dotenv.config();
 
 import { router } from "./routes.js";
 

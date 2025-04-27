@@ -8,4 +8,3 @@ If you're looking for examples or want to learn more visit:
 - [Documentation](https://crawlee.dev/js/api/cheerio-crawler/class/CheerioCrawler)
 - [Examples](https://crawlee.dev/js/docs/examples/cheerio-crawler)
 
-DATABASE_URL="file:./common-core.db"
