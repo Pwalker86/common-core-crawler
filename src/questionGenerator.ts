@@ -44,7 +44,7 @@ async function generateQuestionsForStandard(
   Requirements:
   1. Create a mix of equation-based questions and word problems
   2. Ensure each question is meaningfully different from the others
-  3. Include detailed answers with step-by-step solutions where appropriate
+  3. Each question should have a clear and concise answer (e.g. "42", "true", "less than", "greater than", etc)
   4. Make questions grade-appropriate based on the standard
   
   Format each question and answer pair as a valid JSON object with the following structure:
