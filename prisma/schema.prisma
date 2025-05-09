@@ -14,8 +14,19 @@ datasource db {
 }
 
 model Standard {
-  code        String   @id
+  code        String     @id
   description String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  questions   Question[]
+}
+
+model Question {
+  id           Int      @id @default(autoincrement())
+  questionText String
+  answerText   String
+  standardCode String
+  standard     Standard @relation(fields: [standardCode], references: [code])
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 }
