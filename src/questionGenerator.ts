@@ -55,7 +55,7 @@ async function generateQuestionsForStandard(
 
   try {
     const {text} = await generateText({
-      model: openai("gpt-3.5-turbo-instruct"), // You might want to use a more powerful model
+      model: openai("o4-mini-2025-04-16"), // You might want to use a more powerful model
       prompt,
     });
     
